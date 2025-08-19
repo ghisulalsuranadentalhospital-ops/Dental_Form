@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GHISULAL SURANA DENTAL HOSPITAL - Secure Entry</title>
+    <title>GHISULAL SURANA DENTAL HOSPITAL - Patient Entry Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -53,23 +52,9 @@
 </head>
 <body>
 
-<!-- LOGIN SECTION -->
-<div class="container" id="loginContainer">
-    <h2>Secure Login</h2>
-    <label for="username">Username</label>
-    <input type="text" id="username" placeholder="Enter username" required>
-
-    <label for="password">Password</label>
-    <input type="password" id="password" placeholder="Enter password" required>
-
-    <button onclick="checkLogin()">Login</button>
-    <p id="loginError" style="color: red; display:none;">Invalid credentials</p>
-</div>
-
-<!-- PATIENT FORM SECTION (Hidden until login) -->
-<div class="container" id="formContainer" style="display:none;">
+<div class="container">
     <h2>GHISULAL SURANA DENTAL HOSPITAL</h2>
-    <form method="POST" action="https://script.google.com/macros/s/AKfycbyeZ44NeRpkBRxB_8moTWMhvrYiPoIfZxi3Np2VIKdEAqsn338ha73m_zQ4NncGJ86-/exec">
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbyvGAqfkkD76pkZQdgsZiAona71QSKf_VKnkzWFawjjIwClOXsitGlgEOn-dRQygDc7/exec">
         <label for="patientName">Patient Name</label>
         <input type="text" id="patientName" name="patientName" required>
 
@@ -95,24 +80,5 @@
         <button type="submit">Submit</button>
     </form>
 </div>
-
-<script>
-    // Simple demo login (client-side only, NOT secure)
-    const validUser = "admin";
-    const validPass = "hospital123"; // Change this for demo
-
-    function checkLogin() {
-        const username = document.getElementById("username").value.trim();
-        const password = document.getElementById("password").value.trim();
-
-        if (username === validUser && password === validPass) {
-            document.getElementById("loginContainer").style.display = "none";
-            document.getElementById("formContainer").style.display = "block";
-        } else {
-            document.getElementById("loginError").style.display = "block";
-        }
-    }
-</script>
-
 </body>
 </html>
